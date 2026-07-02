@@ -1,16 +1,59 @@
-# React + Vite
+# Fusion — E-Commerce React
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplicación de e-commerce desarrollada como proyecto final, utilizando exclusivamente los conceptos vistos en la materia.
 
-Currently, two official plugins are available:
+## Stack utilizado
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 18
+- Vite
+- React Router DOM v6
+- Material UI (@mui/material, @mui/icons-material)
+- Context API
+- Hooks: useState, useEffect, useContext
+- Custom Hooks propios
+- Fetch API nativa
+- JavaScript ES6+
 
-## React Compiler
+## API utilizada
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[Platzi Fake Store API](https://fakeapi.platzi.com/) — `https://api.escuelajs.co/api/v1`
 
-## Expanding the Oxlint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Navegación de productos con paginado
+- Filtro por categoría
+- Buscador por nombre
+- Detalle de producto
+- Carrito de compras (agregar, quitar, modificar cantidad, vaciar)
+- Login y registro de usuarios (conectado a la API real)
+- Perfil de usuario
+- Formulario de contacto
+- Página 404
+
+## Estructura de carpetas
+src/
+├── components/   → componentes reutilizables (Navbar, Footer, ProductCard)
+├── pages/        → páginas asociadas a cada ruta
+├── contexts/      → CartContext y UserContext (estado global)
+├── hooks/        → custom hooks (useProducts, useCategories)
+├── services/     → llamadas a la API con fetch
+├── routes/       → configuración de React Router
+├── utils/        → funciones auxiliares (parseo de imágenes)
+└── theme.js      → tema visual de Material UI
+## Cómo correr el proyecto
+
+```bash
+npm install
+npm run dev
+```
+
+La app queda disponible en `http://localhost:5173`
+
+## Usuario de prueba
+
+Para probar el login sin registrarte:
+
+- Email: `john@mail.com`
+- Contraseña: `changeme`
+
+También podés registrarte con tus propios datos desde `/registro`.
